@@ -1,20 +1,25 @@
-CC := gcc
-SRC := src
-INC := lib
-PROJECT_NAME := main
+cc := gcc
+src := src
+lib := lib
+obj := $(src)/obj
+project_name := main
 
-SRC_FILES := $(shell find $(SRC) -name '*.c')
-LIB_FILES := $(shell find $(INC) -name '*.h')
+inc := -I$(lib)
 
-inc := -I inc -lm -Ilib
+cflags := -Wall -O1
 
-CFLAGS := -Wall
-OPTIMLEVEL := -O1
+src_files := $(wildcard $(src)/*.c)
 
+obj_files := $(wildcard $(src)/%.c, $(obj)/%.o, $(src_files))
 
-all:
-	$(CC) $(CFLAGS) $(inc) $(SRC_FILES) $(OPTIMLEVEL) -o  $(PROJECT_NAME) 
+all: $(project_name)
+
+$(project_name): $(obj_files)
+	$(cc) $(cflags) $(inc) -o $@ $^
+
+$(obj)/%.o: $(src)/%.c
+	$(cc) $(cflags) $(inc) -c $< -o $@
 
 .PHONY: clean
 clean:
-	rm -rf $(PROJECT_NAME)
+	rm -rf $(project_name) $(obj)/*.o
