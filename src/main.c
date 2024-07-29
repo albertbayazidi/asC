@@ -10,7 +10,7 @@ float cubeWidth = 10;
 char buffer[width*height];
 
 int main(){
-    printf("Here we have the acctaul size of the matrix: %d \n",width*height);
-    outputVec(buffer);
+    
+    outputVec(buffer,width*height);
 return 0;
 }

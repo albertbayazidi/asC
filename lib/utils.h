@@ -2,5 +2,5 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void outputVec(char* mat);
+void outputVec(char* mat,int size);
 
