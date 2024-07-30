@@ -1,4 +1,5 @@
-#include <time.h>
+#define STB_IMAGE_IMPLEMENTATION
+
 #include "../lib/utils.h"
 #include "../lib/imageLoader.h"
 
@@ -10,7 +11,7 @@ char buffer[width*height];
 int params[3];
 
 int main(){
-    char *path = "img/bilde.png";
+    char *path = "img/background.jpg";
     unsigned char* img_data = loadImage(path,params);
 
     if (img_data == NULL){
