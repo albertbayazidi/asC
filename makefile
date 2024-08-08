@@ -5,8 +5,6 @@ obj := $(src)/obj
 project_name := main
 
 inc := -I$(lib) -lm
-exsternalInc := -Ihome/albert/git/software/stb
-totInc := $(inc) $(exsternalInc)
 
 cflags := -Wall -O1
 
@@ -17,10 +15,10 @@ obj_files := $(wildcard $(src)/%.c, $(obj)/%.o, $(src_files))
 all: $(project_name)
 
 $(project_name): $(obj_files)
-	$(cc) $(cflags) $(totInc) -o $@ $^
+	$(cc) $(cflags) $(inc) -o $@ $^
 
 $(obj)/%.o: $(src)/%.c
-	$(cc) $(cflags) $(totInc) -c $< -o $@
+	$(cc) $(cflags) $(inc) -c $< -o $@
 
 .PHONY: clean
 clean:
