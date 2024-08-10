@@ -41,12 +41,15 @@ asc [options] <image_file>
 Here’s a simple example of how to use asC:
 
 ```bash
-asc -p guts_berserker_armor.jpg -r 0.5 -i ```
+asc -p guts_berserker_armor.jpg -r 0.5 -i > someFile.txt
+```
 
 In this example:
-- The image located at `guts_berserker_armor.jpg` is converted to an ASCII representation and printed to the console.
+- The image located at `guts_berserker_armor.jpg` is converted to an ASCII representation and printed to the terminal.
 - The output is scaled to 50% of the original size.
 - The colors are inverted to improve visibility.
+- <OPTIONAL> '>' puts the output of the terminal to a file.  
+
 
 ## Installation
 
@@ -63,7 +66,7 @@ make
 This project is licensed under the GPL License.
 
 
-## Improvments
+## Improvement 
 
 I am planning on improving this with the following features:
 - video support
