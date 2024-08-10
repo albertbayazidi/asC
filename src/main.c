@@ -3,7 +3,6 @@
 
 #include "../lib/imageUtils.h"
 #include "../lib/asc.h"
-#include "../lib/utils.h"
 
 // width, height, channels
 int params[3];
@@ -12,7 +11,6 @@ char* inverseDensity = "N@#$0gfedcba?1!;:+=,.'      ";
 float resizeFactor = 1.0;
 
 int main(int argc, char **argv){
-    printHelp(argc, argv);
 
     //CHECK ARGS
     if (argc < 1){printf("Give path dumass"); exit(0);}
