@@ -78,17 +78,17 @@ I am planning on improving this with the following features:
 <p float="left">
   <img src="output_image/going_merry.png" width="24%" />
   <img src="output_image/guts_berserker_armor.png" width="24%" />
-  <img src="output_image/sguts_skull.png" width="24%" />
-  <img src="output_image/sjunji_ito.png" width="24%" />
+  <img src="output_image/guts_skull.png" width="24%" />
+  <img src="output_image/junji_ito.png" width="24%" />
 </p>
 
 <table>
   <tr>
-    <td><img src="output_image/sgoing_merry.png" width="48%"></td>
-    <td><img src="output_image/sguts_berserker_armor.png" width="48%"></td>
+    <td><img src="output_image/going_merry.png" width="48%"></td>
+    <td><img src="output_image/guts_berserker_armor.png" width="48%"></td>
   </tr>
   <tr>
-    <td><img src="output_image/sguts_skull.png" width="48%"></td>
-    <td><img src="output_image/sjunji_ito.png" width="48%"></td>
+    <td><img src="output_image/guts_skull.png" width="48%"></td>
+    <td><img src="output_image/junji_ito.png" width="48%"></td>
   </tr>
 </table>
