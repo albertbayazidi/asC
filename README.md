@@ -82,13 +82,3 @@ I am planning on improving this with the following features:
   <img src="output_image/going_merry.png" width="24%" />
 </p>
 
-<table style="border-collapse: collapse; width: 100%; text-align: center;">
-  <tr>
-    <td style="border: none;"><img src="output_image/guts_skull.png" width="48%"></td>
-    <td style="border: none;"><img src="output_image/guts_berserker_armor.png" width="48%"></td>
-  </tr>
-  <tr>
-    <td style="border: none;"><img src="output_image/junji_ito.png" width="48%"></td>
-    <td style="border: none;"><img src="output_image/going_merry.png" width="48%"></td>
-  </tr>
-</table>
