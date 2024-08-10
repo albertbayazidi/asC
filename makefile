@@ -5,12 +5,11 @@ obj := $(src)/obj
 project_name := main
 
 inc := -I$(lib) -lm
-
-cflags := -Wall -O1
+cflags := -Wall -O3
 
 src_files := $(wildcard $(src)/*.c)
 
-obj_files := $(wildcard $(src)/%.c, $(obj)/%.o, $(src_files))
+obj_files := $(patsubst $(src)/%.c,$(obj)/%.o,$(src_files))
 
 all: $(project_name)
 
