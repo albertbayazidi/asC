@@ -78,7 +78,7 @@ I am planning on improving this with the following features:
 <p float="left">
   <img src="output_image/notre_danm_son.png" width="20%" />
   <img src="output_image/guts_skull.png" width="20%" />
-  <img src="output_image/guts_berserker_armor.png" width="20%" />
+  <img src="output_image/guts_berserker_armor.png" width="19%" />
   <img src="output_image/junji_ito.png" width="19%" />
   <img src="output_image/going_merry.png" width="19%" />
 </p>
