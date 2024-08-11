@@ -2,7 +2,7 @@ cc := gcc
 src := src
 lib := lib
 obj := $(src)/obj
-project_name := main
+project_name := asC 
 
 inc := -I$(lib) -lm
 cflags := -Wall -O3
