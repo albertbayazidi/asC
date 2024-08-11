@@ -1,7 +1,5 @@
 #include "../lib/utils.h"
 
-const char *argp_program_version = "asC 0.1";
-const char *argp_program_bug_address = "<albert.bayazidi@gmail.com>";
 
 char* makeDocFromReadme(){
     FILE *fptr; 
@@ -13,11 +11,8 @@ char* makeDocFromReadme(){
     }
 
     fseek(fptr, 0, SEEK_END);
-
     long fileSize = ftell(fptr);
-
     fseek(fptr, 0, SEEK_SET);
-
     char *buffer = (char*)malloc(fileSize + 1); // +1 for the null terminator
 
     if (buffer == NULL) {
@@ -27,19 +22,22 @@ char* makeDocFromReadme(){
     }
 
     fread(buffer, 1, fileSize, fptr);
-
     buffer[fileSize] = '\0';
-
     fclose(fptr);
-
     return (buffer);
+}
+
+void handleInputs(){
+
+
+
 }
 
 void printHelp(int argc, char **argv) {
     if (argc > 1 && strcmp(argv[argc - 1], "-h") == 0) {
         printf("  --path     / -p        path to image\n");
         printf("  --resize   / -r        resize Factor (optional)\n");
-        printf("  --inverse  / -i        invert image color (optional)\n");
+        printf("  --invert  / -i        invert image color (optional)\n");
         printf("  --help     / -h        this information\n");
     }
 }
