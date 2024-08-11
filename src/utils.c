@@ -13,13 +13,7 @@ char* makeDocFromReadme(){
     fseek(fptr, 0, SEEK_END);
     long fileSize = ftell(fptr);
     fseek(fptr, 0, SEEK_SET);
-    char *buffer = (char*)malloc(fileSize + 1); // +1 for the null terminator
-
-    if (buffer == NULL) {
-        printf("Memory allocation failed.\n");
-        fclose(fptr);
-        exit(1);
-    }
+    static char buffer[2500];
 
     fread(buffer, 1, fileSize, fptr);
     buffer[fileSize] = '\0';
@@ -27,11 +21,6 @@ char* makeDocFromReadme(){
     return (buffer);
 }
 
-void handleInputs(){
-
-
-
-}
 
 void printHelp(int argc, char **argv) {
     if (argc > 1 && strcmp(argv[argc - 1], "-h") == 0) {

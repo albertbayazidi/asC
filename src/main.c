@@ -3,33 +3,34 @@
 
 #include "../lib/imageUtils.h"
 #include "../lib/asc.h"
-#include "../lib/utils.h"
+#include "../lib/handleInputs.h"
+
 
 // width, height, channels
 int params[3];
 char* density = "      '.,=+:;!1?abcdefg0$#@N";
-char* inverseDensity = "N@#$0gfedcba?1!;:+=,.'      ";
 float resizeFactor = 1.0;
 
 int main(int argc, char **argv){
-    
-    //CHECK ARGS
-    if (argc < 1){printf("Give path dumass"); exit(0);}
 
+    struct arguments arguments;
 
-    char* path = argv[1];
-    unsigned char* img_data = loadImage(path,params);
+    arguments.args[0] = NULL;
+    arguments.args[1] = NULL;
+    arguments.invert = 0;
 
-    if (argc > 2){
-        resizeFactor = atof(argv[2]);
-        unsigned char* resizedImage = resizeImage(resizeFactor, img_data, params);
-        free(img_data);
-        img_data = resizedImage;
+    struct argp argp = initialize_doc();
+
+    argp_parse(&argp, argc, argv, 0, 0, &arguments);
+
+    if (arguments.invert) {
+        density = "N@#$0gfedcba?1!;:+=,.'      ";
     }
 
-    printSimpleAsc(img_data,params,density);
+  printf ("ARG1 = %s\n ARG2 = %s\n invert or nah = %s\n",
+          arguments.args[0], arguments.args[1],
+          arguments.invert ? "yee": "nah");
 
-    //freeing mem
-    free(img_data);
+
     return 0;
 }
