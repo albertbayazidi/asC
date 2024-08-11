@@ -5,8 +5,7 @@
 #include "argp.h"
 
 // Must free returned obj
-char* makeDocFromReadme();
+const char* makeDocFromReadme();
 
-void printHelp(int argc, char **argv);
 
 
