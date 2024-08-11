@@ -7,8 +7,10 @@
 
 
 struct arguments{
-    char *args[2];
+    char *args[1];
     int invert;
+    float reszie_factor;
 };
+
 
 struct argp initialize_doc();
