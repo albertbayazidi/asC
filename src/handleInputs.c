@@ -2,7 +2,6 @@
 #include "../lib/utils.h"
 
 
-
 const char* argp_program_version = "asC 0.1";
 const char* argp_program_bug_address = "<albert.bayazidi@gmail.com>";
 static char args_doc[] = "Path, resize, invert";
