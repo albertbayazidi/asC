@@ -21,16 +21,22 @@ int main(int argc, char **argv){
     arguments.reszie_factor = 1.0;
 
     struct argp argp = initialize_doc();
-
     argp_parse(&argp, argc, argv, 0, 0, &arguments);
 
     if (arguments.invert) {
         density = "N@#$0gfedcba?1!;:+=,.'      ";
     }
 
-    printf("%s\n", arguments.args[0]);
-    printf("%s\n", density);
-    printf("%f", arguments.reszie_factor);
+    unsigned char* img_data = loadImage(arguments.args[0],params);
+
+    unsigned char* resizedImage = resizeImage(arguments.reszie_factor, img_data, params);
+    free(img_data);
+    img_data = resizedImage;
+
+    printSimpleAsc(img_data,params,density);
+
+    //freeing mem
+    free(img_data);
 
     return 0;
 }
