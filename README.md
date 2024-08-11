@@ -29,13 +29,6 @@ To use asC, run the following command in your terminal:
 asc [options] <image_file>
 ```
 
-### Options
-
-- `-p, --path <image_file>`: Specify the path to the image you want to convert.
-- `-r, --resize <factor>`: Scale the output by the given factor. Values less than 1 are recommended for better readability.
-- `-i, --invert`: Invert the image colors for better contrast in the ASCII output.
-- `-h, --help`: Display help information.
-
 ## Example
 
 Here’s a simple example of how to use asC:
