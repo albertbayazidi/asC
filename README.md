@@ -34,7 +34,7 @@ asc [options] <image_file>
 Here’s a simple example of how to use asC:
 
 ```bash
-asc -p guts_berserker_armor.jpg -r 0.5 -i > someFile.txt
+./asC img/guts_berserker_armor.jpg -r 0.5 -i > someFile.txt
 ```
 
 In this example:

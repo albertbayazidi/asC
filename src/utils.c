@@ -1,9 +1,8 @@
-#include "../lib/utils.h"
+#include "utils.h"
 
-
-const char* makeDocFromReadme(){
+const char* makeDocFromReadme() {
     static char buffer[2500];
-    FILE *fptr = fopen("README.md", "r");
+    FILE* fptr = fopen("README.md", "r");
 
     if (fptr == NULL) {
         printf("Error opening file.\n");
@@ -19,4 +18,3 @@ const char* makeDocFromReadme(){
     fclose(fptr);
     return buffer;
 }
-

@@ -1,0 +1,32 @@
+[
+    {
+        "command": "cc -c -Wall -Ilib -O3 -o src/obj/as.o src/as.c",
+        "directory": "/home/albert/git/hobby/asC",
+        "file": "/home/albert/git/hobby/asC/src/as.c"
+    },
+    {
+        "command": "cc -c -Wall -Ilib -O3 -o src/obj/handleInputs.o src/handleInputs.c",
+        "directory": "/home/albert/git/hobby/asC",
+        "file": "/home/albert/git/hobby/asC/src/handleInputs.c"
+    },
+    {
+        "command": "cc -c -Wall -Ilib -O3 -o src/obj/imageUtils.o src/imageUtils.c",
+        "directory": "/home/albert/git/hobby/asC",
+        "file": "/home/albert/git/hobby/asC/src/imageUtils.c"
+    },
+    {
+        "command": "cc -c -Wall -Ilib -O3 -o src/obj/main.o src/main.c",
+        "directory": "/home/albert/git/hobby/asC",
+        "file": "/home/albert/git/hobby/asC/src/main.c"
+    },
+    {
+        "command": "cc -c -Wall -Ilib -O3 -o src/obj/sdl_utils.o src/sdl_utils.c",
+        "directory": "/home/albert/git/hobby/asC",
+        "file": "/home/albert/git/hobby/asC/src/sdl_utils.c"
+    },
+    {
+        "command": "cc -c -Wall -Ilib -O3 -o src/obj/utils.o src/utils.c",
+        "directory": "/home/albert/git/hobby/asC",
+        "file": "/home/albert/git/hobby/asC/src/utils.c"
+    }
+]
