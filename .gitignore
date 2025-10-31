@@ -1,3 +1,5 @@
 img/*
 main
+compile_commands.json
 .cache
+src/obj/*.o

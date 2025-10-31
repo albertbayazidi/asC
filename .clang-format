@@ -1,6 +1,8 @@
-BasedOnStyle: Google
+BasedOnStyle: LLVM
 IndentWidth: 4
 TabWidth: 4
 AlignAfterOpenBracket: Align
 AllowAllParametersOfDeclarationOnNextLine: false
-
+BinPackParameters: true
+BinPackArguments: true
+ColumnLimit: 0

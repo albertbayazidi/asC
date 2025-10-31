@@ -1,1 +1,2 @@
-*.h linguist-language=C
+*.o linguist-vendored
+*.h linguist-vendored
