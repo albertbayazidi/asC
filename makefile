@@ -5,7 +5,7 @@ obj := $(src)/obj
 project_name := asC
 
 cflags := -Wall -I$(lib)
-ldflags := -lm $(shell pkg-config --libs sdl3)
+ldflags := -lm 
 
 cflags_release := $(cflags) -O3
 cflags_debug   := $(cflags) -O0 -g -fsanitize=address

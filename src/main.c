@@ -1,16 +1,16 @@
+#include <stdint.h>
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_RESIZE_IMPLEMENTATION
 
 #include "asc.h"
 #include "handleInputs.h"
 #include "imageUtils.h"
-#include "sdl_utils.h"
 
 const char *argp_program_version = "asC 0.1";
 const char *argp_program_bug_address = "<albert.bayazidi@gmail.com>";
 // width, height, channels
 int params[3];
-char *density = "      '.,=+:;!1?abcdefg0$#@N";
+char *density = " '.,=+:;!1?abcdefg0$#@N";
 
 int main(int argc, char **argv) {
     struct arguments arguments;
@@ -18,12 +18,13 @@ int main(int argc, char **argv) {
     arguments.args[0] = NULL;
     arguments.invert = 0;
     arguments.reszie_factor = 1.0;
+    arguments.threshold = strlen(density) - 1;
 
     struct argp argp = initialize_doc();
     argp_parse(&argp, argc, argv, 0, 0, &arguments);
 
     if (arguments.invert) {
-        density = "N@#$0gfedcba?1!;:+=,.'      ";
+        density = "N@#$0gfedcba?1!;:+=,.' ";
     }
 
     unsigned char *img_data = loadImage(arguments.args[0], params);
@@ -33,9 +34,7 @@ int main(int argc, char **argv) {
 
     img_data = resizedImage;
 
-    printSimpleAsc(img_data, params, density);
-
-    init();
+    printSimpleAsc(img_data, params, density, arguments.threshold);
 
     // freeing mem
     free(img_data);
