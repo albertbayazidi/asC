@@ -7,8 +7,8 @@ static char args_doc[] = "flag [PATH]";
 static struct argp_option options[] = {
     {"resize", 'r', "FACTOR", 0, "Resize factor (optional)"},
     {"invert", 'i', 0, 0, "Invert image color (optional)"},
-    {"threshold ", 't', "FACTOR", 0, "Cuts off some colors (optional)"},
-
+    {"threshold ", 't', "FACTOR", 0, "Cuts off values under threshold (optional)"},
+    {"colors ", 'c', 0, 0, "Use RGB colors (optional)"},
     {0}};
 
 static error_t parse_opt(int key, char *arg, struct argp_state *state) {
@@ -25,6 +25,10 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state) {
 
     case 't':
         arguments->threshold = atof(arg);
+        break;
+
+    case 'c':
+        arguments->color = 1;
         break;
 
     case ARGP_KEY_ARG:

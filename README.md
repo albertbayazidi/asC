@@ -7,6 +7,7 @@ This tool is perfect for generating text-based images from any of the supported 
 
 - **Convert images to ASCII art**: Transform any image into an ASCII version with customizable scaling and optional color inversion.
 - **Support for multiple image formats**: asC supports a multiple image formats, making it versatile for different use cases.
+- Very simple color support: Using the -c flag will activate RGB
 
 ## Supported File Formats
 

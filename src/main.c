@@ -6,7 +6,7 @@
 #include "handleInputs.h"
 #include "imageUtils.h"
 
-const char *argp_program_version = "asC 0.1";
+const char *argp_program_version = "asC 0.2";
 const char *argp_program_bug_address = "<albert.bayazidi@gmail.com>";
 // width, height, channels
 int params[3];
@@ -19,6 +19,7 @@ int main(int argc, char **argv) {
     arguments.invert = 0;
     arguments.reszie_factor = 1.0;
     arguments.threshold = strlen(density) - 1;
+    arguments.color = 0;
 
     struct argp argp = initialize_doc();
     argp_parse(&argp, argc, argv, 0, 0, &arguments);
@@ -29,12 +30,16 @@ int main(int argc, char **argv) {
 
     unsigned char *img_data = loadImage(arguments.args[0], params);
 
-    unsigned char *resizedImage =
-        resizeImage(arguments.reszie_factor, img_data, params);
+    unsigned char *resizedImage = resizeImage(arguments.reszie_factor, img_data, params);
 
     img_data = resizedImage;
 
-    printSimpleAsc(img_data, params, density, arguments.threshold);
+    if (arguments.color) {
+        printColoredAsc(img_data, params, density, arguments.threshold);
+
+    } else {
+        printSimpleAsc(img_data, params, density, arguments.threshold);
+    }
 
     // freeing mem
     free(img_data);
